@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Trends</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Optional: Fix for sticky nav offset (if needed) */
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: white;
+      z-index: 1000;
+    }
+
+    nav .right a {
+      text-decoration: none;
+      color: black;
+    }
+
+    nav .right li {
+      list-style: none;
+      display: inline;
+      margin: 0 1rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Home Anchor -->
+  <div id="Home"></div>
+
+  <nav>
+    <div class="left">AirChill</div>
+    <div class="right">
+      <a href="#Home"><li>Home</li></a>
+      <a href="#ProductsInformation"><li>Products Information</li></a>
+      <a href="#Shipping"><li>Shipping</li></a>
+    </div>
+  </nav>
+
+  <div class="product-wrapper">
+    <div class="left-panel">
+      <img id="mainImage" src="white front.jpg" alt="Main Image" class="main-image">
+      <div class="thumbs">
+        <button onclick="prevImage()">&#8592;</button>
+        <div class="thumbs-container" id="thumbsContainer"></div>
+        <button onclick="nextImage()">&#8594;</button>
+      </div>
+    </div>
+
+    <div class="right-panel">
+      <h1 style="font-size: 3rem;"><light>evaCHILL</light></h1>
+      <p>Personal Air Cooler</p>
+      <hr>
+
+      <div class="desc">
+        <h3 style="font-size: 1rem;">About Product</h3>
+        <p>evaCHILL is an ultraportable evaporative air cooler that is easy to carry using a handle on the body...</p>
+      </div>
+
+      <hr>
+      <div class="colors">
+        <p style="margin-top: 1rem;"><strong>Color:</strong> <span id="colorName">Opaque White</span></p>
+        <div class="color-options">
+          <div class="color" style="background-color: rgb(220, 220, 220); border: 1px solid #0a0909;" onclick="changeColor('white')"></div>
+          <div class="color" style="background-color: lavender; border: 1px solid #0a0909;" onclick="changeColor('lavender')"></div>
+          <div class="color" style="background-color: rgb(95, 161, 236); border: 1px solid #0a0909;" onclick="changeColor('blue')"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="price-chart">
+    <div class="first" style="font-size: 1.05rem;">
+      <h4>Air Cooler</h4>
+      <p>5000/-</p>
+    </div>
+    <div class="second" style="font-size: 1.05rem;">
+      <h4>Air Cooler + Cartridge</h4>
+      <p>10000/-</p>
+    </div>
+  </div>
+
+  <div class="cart">
+    <button style="font-size: 1rem;">Add Bundle to cart</button>
+  </div>
+
+  <hr>
+
+  <!-- Product Information Section -->
+  <div id="ProductsInformation" class="information-panel">
+    <h2>Product Information</h2>
+    <div class="foot-panel1">     
+      <ul>
+        <h3>Color:</h3>
+        <a>Opaque White, Lavendar, Blue</a>
+      </ul>
+      <ul>
+        <h3>Power consumption:</h3>
+        <a>7.5W</a>
+      </ul>
+      <ul>
+        <h3>Cooling power:</h3>
+        <a>100W-350W</a>
+        <p>340-1190 BTU/hr</p>
+      </ul>
+      <ul>
+        <h3>Volumetric flow rate:</h3>
+        <a>49.1cfm</a>
+      </ul>
+    </div>
+    <div class="foot-panel2">     
+      <ul>
+        <h3>Noise level:</h3>
+        <a>Up to 50dB</a>
+      </ul>
+      <ul style="margin-left: 10rem;">
+        <h3>Size</h3>
+        <a>170*170*172 mm</a>
+      </ul>
+      <ul>
+        <h3>Evaporative cartridge life expectancy:</h3>
+        <a>3-6 months</a>
+      </ul>
+      <ul>
+        <h3>Water tank capacity:</h3>
+        <a>800ml</a>
+      </ul>
+    </div>
+    <div class="foot-panel3">     
+      <ul>
+        <h3>Coverage area:</h3>
+        <a>Up to 2-2.5m</a>
+      </ul>
+      <ul>
+        <h3>Power plugs:</h3>
+        <a>UK, EU, AU</a>
+      </ul>
+      <ul>
+        <h3>Power supply:</h3>
+        <a>USB type-C until 2021; micro-USB since 2021</a>
+      </ul>
+      <ul>
+        <h3>Supplied accessories:</h3>
+        <a>Cartridge, Power cord, Funnel</a>
+      </ul>
+    </div>
+           <div class="foot-panel4">
+      <ul>
+        <h3>Energy efficiency ratio:</h3>
+        <a>21-37</a>
+      </ul>
+       <ul>
+        <h3>Net weight:</h3>
+        <a>750 gm</a>
+      </ul>
+       <ul>
+        <h3>Water refill cycle:</h3>
+        <a>Every 3-8 hours</a>
+      </ul>
+ </div>
+  </div>
+
+  <hr>
+
+  <!-- Shipping Section -->
+  <div id="Shipping" class="shipping">
+    <div class="shipping-details">
+      <p>Shipping address</p>
+    </div>
+
+    <div class="col">
+      <div class="form-control">
+        <div class="form-inputs">
+          <input type="text" class="input-field" placeholder="Name">
+          <input type="text" class="input-field" placeholder="Email">
+          <input type="text" class="input-field" placeholder="Street Name">
+        </div>
+        <div class="form-inputs">
+          <input type="text" class="input-field" placeholder="City">
+          <input type="text" class="input-field" placeholder="Country">
+        </div>
+        <div class="form-inputs">
+          <input type="text" class="input-field" placeholder="Ph.no" value="+91 " style="width: 15rem; font-size: 1rem;">
+        </div>
+        <div class="check">
+          <input type="radio" name="option" value="1"><p>Home</p>
+          <input type="radio" name="option" value="2"><p>Office</p>
+        </div>
+        <div class="form-button">
+          <button class="btn">Send</button>
+          <button class="btn" style="background-color: rgb(1, 48, 1);">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
