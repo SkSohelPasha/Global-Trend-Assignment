@@ -26,7 +26,7 @@
     nav .right li {
       list-style: none;
       display: inline;
-      margin: 0 1rem;
+      margin: 0.1rem;
       cursor: pointer;
     }
   </style>
@@ -55,6 +55,15 @@
       </div>
     </div>
 
+      <div class="colors">
+        <p style="margin-top: 1rem;"><strong>Color:</strong> <span id="colorName">Opaque White</span></p>
+        <div class="color-options">
+          <div class="color" style="background-color: rgb(220, 220, 220); border: 1px solid #0a0909;" onclick="changeColor('white')"></div>
+          <div class="color" style="background-color: lavender; border: 1px solid #0a0909;" onclick="changeColor('lavender')"></div>
+          <div class="color" style="background-color: rgb(95, 161, 236); border: 1px solid #0a0909;" onclick="changeColor('blue')"></div>
+        </div>
+      </div>
+    
     <div class="right-panel">
       <h1 style="font-size: 3rem;"><light>evaCHILL</light></h1>
       <p>Personal Air Cooler</p>
@@ -66,14 +75,6 @@
       </div>
 
       <hr>
-      <div class="colors">
-        <p style="margin-top: 1rem;"><strong>Color:</strong> <span id="colorName">Opaque White</span></p>
-        <div class="color-options">
-          <div class="color" style="background-color: rgb(220, 220, 220); border: 1px solid #0a0909;" onclick="changeColor('white')"></div>
-          <div class="color" style="background-color: lavender; border: 1px solid #0a0909;" onclick="changeColor('lavender')"></div>
-          <div class="color" style="background-color: rgb(95, 161, 236); border: 1px solid #0a0909;" onclick="changeColor('blue')"></div>
-        </div>
-      </div>
     </div>
   </div>
 
